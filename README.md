@@ -4,9 +4,6 @@
 [![TensorFlow 2.4+](https://img.shields.io/badge/TensorFlow-2.4+-orange.svg)](https://tensorflow.org)
 [![OpenCV 4.5+](https://img.shields.io/badge/OpenCV-4.5+-green.svg)](https://opencv.org)
 [![Accuracy](https://img.shields.io/badge/Accuracy-94%25-brightgreen.svg)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/forest-fire-prediction-deep-learning?style=social)]()
-[![GitHub forks](https://img.shields.io/github/forks/yourusername/forest-fire-prediction-deep-learning?style=social)]()
 
 *Early Detection Saves Lives and Ecosystems*
 
@@ -88,3 +85,7 @@ pip install -r requirements.txt
 
 # Download pre-trained model
 python src/download_model.py
+
+
+
+
