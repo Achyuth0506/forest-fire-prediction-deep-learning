@@ -72,3 +72,15 @@ git clone https://github.com/yourusername/forest-fire-prediction-deep-learning.g
 cd forest-fire-prediction-deep-learning
 pip install -r requirements.txt
 python src/download_model.py
+
+## 📁 Dataset
+
+Due to the large size of the dataset, it is not hosted in this GitHub repository.
+
+The dataset can be accessed here:
+🔗 https://drive.google.com/your-dataset-link
+
+Note:
+- The dataset is provided strictly for academic and research purposes.
+- Please follow the usage guidelines mentioned in the dataset source.
+
