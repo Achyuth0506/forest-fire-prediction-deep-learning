@@ -13,14 +13,10 @@
 - [✨ Features](#-features)
 - [📊 Results](#-results)
 - [🛠️ Installation](#️-installation)
-- [🚀 Quick Start](#-quick-start)
 - [🏗️ Architecture](#️-architecture)
 - [📁 Dataset](#-dataset)
-- [📈 Performance](#-performance)
-- [📸 Screenshots](#-screenshots)
-- [👥 Team](#-team)
-- [📄 Documentation](#-documentation)
-- [🤝 Contributing](#-contributing)
+- [👥 Contributors](#-team)
+- [📄 Acknowledgment](#-Acknowledgment)
 - [📜 License](#-license)
 - [📞 Contact](#-contact)
 
@@ -66,21 +62,72 @@ This project implements a **Deep Learning-based Forest Fire Detection System** t
 - Webcam (for real-time detection)
 - WhatsApp Web access (for alerts)
 
-### **Method 1: Using pip**
-```bash
+## **Method 1: Using pip**
+### **Clone the repository**
 git clone https://github.com/yourusername/forest-fire-prediction-deep-learning.git
 cd forest-fire-prediction-deep-learning
+
+### **Install dependencies**
 pip install -r requirements.txt
+
+### **Download pre-trained model**
 python src/download_model.py
 
-## 📁 Dataset
 
-Due to the large size of the dataset, it is not hosted in this GitHub repository.
+## Method 2: Using Anaconda
+### Create conda environment
+conda create -n forest-fire python=3.8
+conda activate forest-fire
 
-The dataset can be accessed here:
-🔗 https://drive.google.com/your-dataset-link
+### Install packages
+conda install tensorflow-gpu opencv numpy pandas scikit-learn matplotlib
+pip install selenium imutils
 
-Note:
-- The dataset is provided strictly for academic and research purposes.
-- Please follow the usage guidelines mentioned in the dataset source.
+
+## 🏗️ Architecture
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Input Source  │───▶│   Preprocessing │───▶│  CNN Model     │
+│  (Image/Video)  │    │   (224x224 RGB) │    │  (MobileNetV2) │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+                                                       │
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│  WhatsApp Alert │◀───│  Alert System   │◀───│  Classification │
+│      Module     │    │    (Selenium)   │    │    (Fire/NoFire)│
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+
+## CNN Architecture Details
+
+- Base Model: MobileNetV2 (pre-trained on ImageNet)
+- Input Size: 224 × 224 × 3
+- Layers: 5 Convolution, 3 Pooling, 3 Fully Connected
+- Dropout: 50% to prevent overfitting
+- Optimizer: Adam (learning rate: 1e-4)
+- Loss Function: Sparse Categorical Crossentropy
+
+  ## 📁 Dataset
+- Dataset Information
+- Total Images: 10,000+
+- Classes: Fire (5,000), No Fire (5,000)
+- Sources: Real forest fire images, simulation data
+- Format: JPG (224x224 pixels)
+- The dataset is available at: [Google Drive](https://drive.google.com/drive/folders/1g7ovn6PPlJwBxj5cJDk8AKeLNigblPMO?usp=sharing)
+
+  ## 👥 Contributors
+- John Joshua Obed.P 
+- Achyuth Kumar.U
+
+  ## 🙏 Acknowledgments
+- Mrs. V. Shirisha Reddy (Project Guide)
+- Mrs. V. Theresa Vinayasheela (HOD)
+- Loyola Academy Degree and PG College
+
+  ## 📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 📞 Contact
+For questions or collaborations:
+Achyuth Kumar.U: achyuthundrakonda@gmail.com
+
+
+
 
