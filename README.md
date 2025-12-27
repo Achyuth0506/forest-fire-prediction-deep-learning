@@ -86,6 +86,28 @@ pip install -r requirements.txt
 # Download pre-trained model
 python src/download_model.py
 
+## 🏗️ Architecture
 
+### System Design
+
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Input Source  │───▶│   Preprocessing │───▶│  CNN Model     │
+│  (Image/Video)  │    │   (224x224 RGB) │    │  (MobileNetV2) │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+                                                       │
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│  WhatsApp Alert │◀───│  Alert System   │◀───│  Classification │
+│      Module     │    │    (Selenium)   │    │    (Fire/NoFire)│
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+
+
+### CNN Architecture Details
+
+- **Base Model**: MobileNetV2 (pre-trained on ImageNet)
+- **Input Size**: 224 × 224 × 3
+- **Layers**: 5 Convolution, 3 Pooling, 3 Fully Connected
+- **Dropout**: 50% to prevent overfitting
+- **Optimizer**: Adam (learning rate: 1e-4)
+- **Loss Function**: Sparse Categorical Crossentropy
 
 
